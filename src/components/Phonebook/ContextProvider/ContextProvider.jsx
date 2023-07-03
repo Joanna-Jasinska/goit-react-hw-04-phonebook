@@ -5,8 +5,6 @@ const PhonebookContext = createContext();
 export const usePhonebook = () => useContext(PhonebookContext);
 
 export const PhonebookProvider = props => {
-  console.log(`PhonebookProvider props:`);
-  console.log(props);
   const [name, setName] = useState(props.name);
   const [number, setNumber] = useState(props.number);
   const [contacts, setContacts] = useState(

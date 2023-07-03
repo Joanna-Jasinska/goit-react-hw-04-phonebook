@@ -29,7 +29,6 @@ export const PhonebookContent = () => {
   }, [contacts]);
 
   const addContactHandle = (e, newContact) => {
-    console.log(`Pcontent add Contact Handle`);
     e.preventDefault();
     const filtered =
       contacts.find(
