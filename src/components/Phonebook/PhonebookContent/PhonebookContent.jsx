@@ -26,7 +26,7 @@ export const PhonebookContent = () => {
   }, [setContacts]);
   useEffect(() => {
     SaveContacts();
-  }, [contacts, SaveContacts]);
+  }, [contacts]);
 
   const addContactHandle = (e, newContact) => {
     e.preventDefault();
