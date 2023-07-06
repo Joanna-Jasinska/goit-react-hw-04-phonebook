@@ -23,10 +23,10 @@ export const PhonebookContent = () => {
   useEffect(() => {
     const loadedContacts = JSON.parse(localStorage.getItem('contacts')) || [];
     setContacts(loadedContacts);
-  }, []);
+  }, [setContacts]);
   useEffect(() => {
     SaveContacts();
-  }, [contacts]);
+  }, [contacts, SaveContacts]);
 
   const addContactHandle = (e, newContact) => {
     e.preventDefault();
