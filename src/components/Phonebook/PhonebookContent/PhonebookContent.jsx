@@ -16,16 +16,12 @@ export const PhonebookContent = () => {
     setFilter,
   } = usePhonebook();
 
-  const SaveContacts = () => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
-  };
-
   useEffect(() => {
     const loadedContacts = JSON.parse(localStorage.getItem('contacts')) || [];
     setContacts(loadedContacts);
   }, [setContacts]);
   useEffect(() => {
-    SaveContacts();
+    localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
   const addContactHandle = (e, newContact) => {
